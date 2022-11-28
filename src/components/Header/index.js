@@ -5,7 +5,7 @@ function Header() {
         <header>
             <section>
                 <h1>
-                    <a href='/'>Raenique Walters</a>
+                    Raenique Walters
                 </h1>
             </section>
         </header>
