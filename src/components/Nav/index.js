@@ -1,47 +1,37 @@
-import React from 'react';
-import Tabs from '@mui/material/Tabs';
-import {Tab} from '@mui/material';
-import { useNavigate, useLocation } from 'react-router-dom';
-import {useStateAsync} from '../../utils/helpers';
+import React, {useEffect} from 'react';
+import {capitalizeFirstLetter} from '../../utils/helpers';
 
-function Nav () {
-    const navigation = useNavigate();
-    const location = useLocation();
-    const navBar = ['About', 'Portfolio', 'Contact', 'Resume'];
 
-    let initialState;
+function Nav (props) {
+    const {
+        portfolioPages = [],
+        setCurrentPage,
+        currentPage,
+    } = props;
 
-    switch (location.pathname) {
-        case '/Portfolio':
-            initialState = 1;
-            break
-        case '/Contact':
-            initialState = 2;
-            break
-        case '/Resume':
-            initialState = 3;
-            break
-        default: 
-        initialState = 0;
-        break
-
-    }
-
-    const showPage = async (event, value) => {
-        const currentState = await setCurrentNavTab(value);
-        navigation(`/${navBar[currentState]}`);
-    };
-
-    const [currentNavTab, setCurrentNavTab] = useStateAsync(initialState);
+    useEffect(() => {
+        document.title = capitalizeFirstLetter(currentPage.name);
+    }, [currentPage]);
 
     return (
-        <div className='navBarTabs'>
-            <Tabs value={currentNavTab} onChange={showPage} className='nav-tabs'>
-                {navBar.map((nav, i) => (
-                    <Tab value={i} label={nav} key={nav} className='nav-bar-tab' />
-                ))}
-            </Tabs>
-        </div>
+        <nav>
+            <div>
+                <a href='/'>Raenique Walters</a>
+                <button>
+                    <span></span>
+                </button>
+                <div>
+                    <ul>
+                        {portfolioPages.map((Page) => (
+                            <li className={`${currentPage.name === Page.name && 'active'}`}
+                            key={Page.name}>
+                                <span onClick={() => setCurrentPage(Page)}>{capitalizeFirstLetter(Page.name)}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </nav>
     );
 }
 

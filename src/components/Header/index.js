@@ -1,13 +1,9 @@
 import React from 'react';
 
-function Header() {
+function Header(props) {
     return (
         <header>
-            <section>
-                <h1>
-                    Raenique Walters
-                </h1>
-            </section>
+            {props.children}
         </header>
     );
 }

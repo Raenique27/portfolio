@@ -1,25 +1,28 @@
 import React, {useState} from 'react';
-import About from './components/About';
 import Header from './components/Header';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Nav from './components/Nav';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('About');
+  const [portfolioPages] = useState([
+    {name: "about me"},
+    {name: "portfolio"},
+    {name: "contact"},
+    {name: "resume"}
+  ]);
+
+  const [currentPage, setCurrentPage] = useState(portfolioPages[0]);
+
   return (
-    <Router>
-      <Header setCurrentPage={setCurrentPage} currentPage={currentPage}></Header>
-      <Nav/>
+    <div>
+      <Header>
+        <Nav portfolioPages={portfolioPages} setCurrentPage={setCurrentPage} currentPage={currentPage}></Nav>
+      </Header>
       <main>
-        <Routes>
-          <Route path='/' element={<About/>} />
-          <Route path='/portfolio' element={<About/>}/>
-          <Route path='/About' element={<About/>} />
-        </Routes>      
+        
       </main>
       <Footer/>
-    </Router>
+    </div>
   );
 }
 
