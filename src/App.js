@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import About from './components/About';
 import Header from './components/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('About');
@@ -17,6 +18,7 @@ function App() {
           <Route path='/About' element={<About/>} />
         </Routes>      
       </main>
+      <Footer/>
     </Router>
   );
 }
