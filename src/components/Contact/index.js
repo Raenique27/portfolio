@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 import { validateEmail } from '../../utils/helpers';
 
