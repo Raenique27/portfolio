@@ -12,8 +12,8 @@ function Projects({ project }) {
                     <div className='project-box-content'>
                         <p className='project-name'>{description}</p>
                         <br/>
-                        <a href={repository} className='project-info text-faded' target='_blank'><i className='fab fa-github'></i></a>
-                        <a href={link} className='project-info text-faded' target='_blank'>{removeHyphensAndCapitalize(name)}</a> {' '}
+                        <a href={repository} className='project-info text-faded'><i className='fab fa-github'></i></a>
+                        <a href={link} className='project-info text-faded'>{removeHyphensAndCapitalize(name)}</a> {' '}
                     </div>
                 </div>
             </div>
