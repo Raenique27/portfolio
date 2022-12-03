@@ -66,7 +66,7 @@ function Portfolio() {
                                     <div className='project-box-caption-content'>
                                         {(<p className='project-name' {...item.description}>{item.description}</p>)}
                                         {(<a href={item.repository} className='project-category text-faded'>Github Repo</a>)}
-                                        &nbsp; &nbsp; &nbsp;
+                                        &nbsp; 
                                         {(<a href={item.link} className='project-category text-faded'>{item.title}</a>)}
                                     </div>
                                 </div>

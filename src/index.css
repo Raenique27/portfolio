@@ -5,17 +5,17 @@ html {
 }
 
 body {
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 hr {
   max-width: 50px;
   border-width: 3px;
-  background-color: white;
+  background-color: black;
 }
 
 a {
-  color:goldenrod;
+  color: goldenrod;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -25,8 +25,8 @@ a:hover {
   color: goldenrod;
 }
 
-h1, 
-h2, 
+h1,
+h2,
 h3,
 h4 {
   font-family: Arial, Helvetica, sans-serif;
@@ -50,7 +50,7 @@ section {
 #Nav .navbar-brand {
   font-weight: 700;
   text-transform: uppercase;
-  color:goldenrod;
+  color: goldenrod;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -59,31 +59,33 @@ section {
   color: goldenrod;
 }
 
-#Nav .navbar-nav > li.nav-link,
-#Nav .navbar-nav > li.nav-link:focus {
+#Nav .navbar-nav>li.nav-link,
+#Nav .navbar-nav>li.nav-link:focus {
   font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
   color: #212529;
 }
-#Nav .navbar-nav > li.nav-link:hover,
-#Nav .navbar-nav > li.nav-link:focus:hover {
+
+#Nav .navbar-nav>li.nav-link:hover,
+#Nav .navbar-nav>li.nav-link:focus:hover {
   color: goldenrod;
 }
 
-#Nav .navbar-nav > li.nav-link.active,
-#Nav .navbar-nav > li.nav-link:focus.active {
-  color:goldenrod !important;
+#Nav .navbar-nav>li.nav-link.active,
+#Nav .navbar-nav>li.nav-link:focus.active {
+  color: goldenrod !important;
   background-color: transparent;
 }
-#Nav .navbar-nav > li.nav-link.active:hover,
-#Nav .navbar-nav > li.nav-link:focus.active:hover {
+
+#Nav .navbar-nav>li.nav-link.active:hover,
+#Nav .navbar-nav>li.nav-link:focus.active:hover {
   background-color: transparent;
 }
 
 .masthead {
-  padding-top: 8rem;
+  padding-top: 5rem;
   padding-bottom: calc(14rem - 56px);
   background-image: url("./assets/images/portfolio\ background.jpeg");
   background-position: center center;
@@ -97,12 +99,16 @@ section {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
 .masthead h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 30px;
+  color: black;
 }
+
 .masthead p {
   font-weight: 300;
+  color: black;
 }
 
 .masthead img {
@@ -110,4 +116,73 @@ section {
   border-radius: 45px;
 }
 
+.project-box {
+  position: relative;
+  display: block;
+  max-width: 650px;
+  margin: 0 auto;
+}
 
+.project-box .project-box-caption {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: goldenrod;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.project-box .project-box-caption .project-box-caption-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.project-box .project-box-caption .project-box-caption-content .project-category,
+.project-box .project-box-caption .project-box-caption-content .project-name {
+  padding: 0 15px;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.project-box .project-box-caption .project-box-caption-content .project-category {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.project-box .project-box-caption .project-box-caption-content .project-name {
+  font-size: 18px;
+}
+
+.project-box:hover .project-box-caption {
+  opacity: 1;
+}
+
+.project-box:focus {
+  outline: none;
+}
+
+.margin-top {
+  margin-top: 85px;
+}
+
+.project-box-caption-content {
+  line-height: 2rem;
+}
+
+.project-box-caption-content a {
+  color: #fff;
+}
+
+.project-box-caption-content a:hover {
+  color: lightgrey;
+  text-decoration: none;
+}
