@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Nav from './components/Nav';
 import Pages from './components/Pages';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [portfolioPages] = useState([

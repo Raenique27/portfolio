@@ -14,13 +14,16 @@ function Nav (props) {
     }, [currentPage]);
 
     return (
-        <nav>
-            <div>
-                <a href='/'>Raenique Walters</a>
-                <div>
-                    <ul>
+        <nav className='navbar navbar-expand-lg navbar-light fixed-top'>
+            <div className='container'>
+                <a href='/' className='navbar-brand js-scroll-trigger'>Raenique Walters</a>
+                <button className='navbar-toggler navbar-toggler-right' type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation'>
+                    <span className='navbar-toggler-icon'></span>
+                </button>
+                <div className='collapse navbar-collapse'>
+                    <ul className='navbar-nav ml-auto'>
                         {portfolioPages.map((Page) => (
-                            <li className={`${currentPage.name === Page.name && 'active'}`}
+                            <li className={`nav-item nav-link js-scroll-trigger ${currentPage.name === Page.name && 'active'}`}
                             key={Page.name}>
                                 <span onClick={() => setCurrentPage(Page)}>{capitalizeFirstLetter(Page.name)}</span>
                             </li>
