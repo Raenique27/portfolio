@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react';
 import {capitalizeFirstLetter} from '../../utils/helpers';
+import Navbar from 'react-bootstrap/Navbar'
+import { Container } from 'react-bootstrap';
 
 
 function Nav (props) {
@@ -14,13 +16,11 @@ function Nav (props) {
     }, [currentPage]);
 
     return (
-        <nav className='navbar navbar-expand-lg navbar-light fixed-top' id='Nav'>
-            <div className='container'>
-                <a href='/' className='navbar-brand js-scroll-trigger'>Raenique Walters</a>
-                <button className='navbar-toggler navbar-toggler-right' type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation'>
-                    <span className='navbar-toggler-icon'></span>
-                </button>
-                <div className='collapse navbar-collapse justify-content-end'>
+        <Navbar collapseOnSelect expand='lg' bg='light' fixed='top' id='Nav'>
+            <Container>
+                <Navbar.Brand href='/' className='navbar-brand js-scroll-trigger'>Raenique Walters</Navbar.Brand>
+                <Navbar.Toggle  aria-controls='responsive-navbar-nav'/>
+                <Navbar.Collapse className='justify-content-end' id='responsive-navbar-nav'>
                     <ul className='navbar-nav ml-auto'>
                         {portfolioPages.map((Page) => (
                             <li className={`nav-item nav-link js-scroll-trigger ${currentPage.name === Page.name && 'active'}`}
@@ -29,9 +29,9 @@ function Nav (props) {
                             </li>
                         ))}
                     </ul>
-                </div>
-            </div>
-        </nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 }
 
