@@ -14,10 +14,10 @@ function About() {
             <div className='container my-auto'>
                 <div className='row'>
                     <div className='col-lg-10 mx-auto'>
-                        <h1 className='text-dark'>{capitalizeFirstLetter(currentPage.name)}</h1>
+                        <h1 className='text-white'>{capitalizeFirstLetter(currentPage.name)}</h1>
                         <hr />
                         <img src={myphoto} alt='Raenique Walters' style={{ width: '25%' }} />
-                        <p className='text-dark'>
+                        <p className='text-white'>
                             I am an aspiring front end developer looking to put my full stack web developer knowledge to use. I love to create so being able to bring my creative mind to a team is something I believe to be very valuable. I hope to continue learning more about web development as well as sharpening and enhancing the knowledge that I have already acquired.
                             When I am not coding I spend my time painting, working out, traveling, and spending time with my friends and family.
                         </p>

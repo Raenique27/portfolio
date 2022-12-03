@@ -18,12 +18,12 @@ function Nav (props) {
     return (
         <Navbar collapseOnSelect expand='lg' bg='light' fixed='top' id='Nav'>
             <Container>
-                <Navbar.Brand href='/' className='navbar-brand js-scroll-trigger'>Raenique Walters</Navbar.Brand>
+                <Navbar.Brand href='/' className='navbar-brand'>Raenique Walters</Navbar.Brand>
                 <Navbar.Toggle  aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse className='justify-content-end' id='responsive-navbar-nav'>
                     <ul className='navbar-nav ml-auto'>
                         {portfolioPages.map((Page) => (
-                            <li className={`nav-item nav-link js-scroll-trigger ${currentPage.name === Page.name && 'active'}`}
+                            <li className={`nav-item nav-link ${currentPage.name === Page.name && 'active'}`}
                             key={Page.name}>
                                 <span onClick={() => setCurrentPage(Page)}>{capitalizeFirstLetter(Page.name)}</span>
                             </li>

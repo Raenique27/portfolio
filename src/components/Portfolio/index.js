@@ -52,7 +52,7 @@ function Portfolio() {
             <div className='container-fluid p-0'>
                 <h1 className='text-center margin-top'>{capitalizeFirstLetter(currentPage.name)}</h1>
                 <hr className='my-4' />
-                <div className='row popup-gallery no-gutters'>
+                <div className='row'>
                     {project.map((item, i) => (
                         <div className='col-lg-4 col-sm-6' key={i}>
                             <div className='project-box'>
@@ -60,7 +60,7 @@ function Portfolio() {
                                     src={item.img}
                                     alt={item.title}
                                     className='img-fluid'
-                                    style={{ width: '40%' }}
+                                    style={{ width: '100%' }}
                                 />
                                 <div className='project-box-caption'>
                                     <div className='project-box-caption-content'>
