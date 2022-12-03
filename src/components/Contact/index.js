@@ -48,32 +48,32 @@ function Contact() {
     };
 
     return (
-        <section>
-            <div>
-                <div>
-                    <div>
-                        <h1>{capitalizeFirstLetter(currentPage.name)}</h1>
-                        <hr />
-                        <form id='contact-form' onSubmit={handleSubmit}>
+        <section className='bg-dark'>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-lg-10 mx-auto text-dark mb-4'>
+                        <h1 className='text-center text-white'>{capitalizeFirstLetter(currentPage.name)}</h1>
+                        <hr  className='light my-4'/>
+                        <form id='contact-form' onSubmit={handleSubmit} className='mb-5'>
                             <div>
-                                <label htmlFor='name'>Name:</label>
-                                <input placeholder='Name' type='text' name='name' defaultValue={name} onBlur={handleChange} />
+                                <label className='text-white' htmlFor='name'>Name:</label>
+                                <input className='form-control' placeholder='Name' type='text' name='name' defaultValue={name} onBlur={handleChange} />
                             </div>
                             <div>
-                                <label htmlFor='email'>Email address:</label>
-                                <input placeholder='Email' type='email' name='email' defaultValue={email} onBlur={handleChange} />
+                                <label className='text-white' htmlFor='email'>Email address:</label>
+                                <input className='form-control' placeholder='Email' type='email' name='email' defaultValue={email} onBlur={handleChange} />
                             </div>
                             <div>
-                                <label htmlFor='message'>Message:</label>
-                                <textarea placeholder='Message' name='message' rows='5' defaultValue={message} onBlur={handleChange} />
+                                <label className='text-white' htmlFor='message'>Message:</label>
+                                <textarea className='form-control' placeholder='Message' name='message' rows='5' defaultValue={message} onBlur={handleChange} />
                             </div>
                             {errorMessage && (
                                 <div>
-                                    <p>{errorMessage}</p>
+                                    <p className='error-text'>{errorMessage}</p>
                                 </div>
                             )}
-                            <div>
-                                <button type='submit'>Submit</button>
+                            <div className='text-center'>
+                                <button type='submit' className='btn btn-primary btn-xl js-scroll-trigger'>Submit</button>
                             </div>
                         </form>
                     </div>

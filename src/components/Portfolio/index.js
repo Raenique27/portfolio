@@ -4,7 +4,7 @@ import { capitalizeFirstLetter } from '../../utils/helpers';
 function Portfolio() {
     const [portfolioPages] = useState([
         {
-            name:'portfolio'
+            name: 'portfolio'
         }
     ]);
     const [currentPage] = useState(portfolioPages[0]);
@@ -52,19 +52,25 @@ function Portfolio() {
             <div className='container-fluid p-0'>
                 <h1 className='text-center margin-top'>{capitalizeFirstLetter(currentPage.name)}</h1>
                 <hr className='my-4' />
-                <div className='row pop-up-gallery no-gutters'>
+                <div className='row popup-gallery no-gutters'>
                     {project.map((item, i) => (
-                        <div key={i}>
-                            <img
-                                src={item.img}
-                                alt={item.title}
-                                className='img-fluid'
-                                style={{width:'40%'}}
-                            />
-                                {(<p {...item.description}>{item.description}</p>)}
-                                {(<a href={item.repository}>Github Repo</a>)}
-                                &nbsp; &nbsp; &nbsp;
-                                {(<a href={item.link}>{item.title}</a>)}
+                        <div className='col-lg-4 col-sm-6' key={i}>
+                            <div className='project-box'>
+                                <img
+                                    src={item.img}
+                                    alt={item.title}
+                                    className='img-fluid'
+                                    style={{ width: '40%' }}
+                                />
+                                <div className='project-box-caption'>
+                                    <div className='project-box-caption-content'>
+                                        {(<p className='project-name' {...item.description}>{item.description}</p>)}
+                                        {(<a href={item.repository} className='project-category text-faded'>Github Repo</a>)}
+                                        &nbsp; &nbsp; &nbsp;
+                                        {(<a href={item.link} className='project-category text-faded'>{item.title}</a>)}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
