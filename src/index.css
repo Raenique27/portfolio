@@ -41,6 +41,7 @@ section {
   padding: 3rem 0;
 }
 
+/* Nav Bar */
 #Nav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: #fff;
@@ -84,6 +85,7 @@ section {
   background-color: transparent;
 }
 
+/* About Me */
 .masthead {
   padding-top: 5rem;
   padding-bottom: calc(14rem - 56px);
@@ -116,6 +118,7 @@ section {
   border-radius: 45px;
 }
 
+/* Portfolio Page */
 .project-box {
   position: relative;
   display: block;
@@ -186,3 +189,14 @@ section {
   color: lightgrey;
   text-decoration: none;
 }
+
+/* Footer */
+footer a {
+  margin: 20pt;
+}
+
+footer i.fab {
+  font-size: 2rem;
+  color: goldenrod;
+}
+
