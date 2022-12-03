@@ -17,9 +17,6 @@ function Nav (props) {
         <nav>
             <div>
                 <a href='/'>Raenique Walters</a>
-                <button>
-                    <span></span>
-                </button>
                 <div>
                     <ul>
                         {portfolioPages.map((Page) => (

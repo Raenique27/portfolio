@@ -1,7 +1,6 @@
 import React from 'react';
 import About from '../About';
 import Portfolio from '../Portfolio';
-import Content from '../Content';
 import Contact from '../Contact';
 import Resume from '../Resume';
 
@@ -22,9 +21,7 @@ function Pages({currentPage}) {
     };
 
     return (
-        <section>
-            <Content>{showPage()}</Content>
-        </section>
+        showPage()
     );
 }
 
