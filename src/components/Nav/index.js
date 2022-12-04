@@ -18,7 +18,7 @@ function Nav (props) {
     return (
         <Navbar collapseOnSelect expand='lg' bg='light' fixed='top' id='Nav'>
             <Container>
-                <Navbar.Brand href='/' className='navbar-brand'>Raenique Walters</Navbar.Brand>
+                <Navbar.Brand href='/portfolio/' className='navbar-brand'>Raenique Walters</Navbar.Brand>
                 <Navbar.Toggle  aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse className='justify-content-end' id='responsive-navbar-nav'>
                     <ul className='navbar-nav ml-auto'>
