@@ -10,11 +10,11 @@ function Resume() {
     ]);
     const [currentPage] = useState(portfolioPages[0]);
     return (
-        <section className='bg-dark'>
+        <section className='bg-light'>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-lg-10 mx-auto text-white mb-4'>
-                        <h1 className='text-center'>{capitalizeFirstLetter(currentPage.name)}</h1>
+                    <div className='col-lg-10 mx-auto text-black mb-4'>
+                        <h1 className='text-center mt-5'>{capitalizeFirstLetter(currentPage.name)}</h1>
                         <hr className='light my-4'/>
                         <p className='text-center'>
                             Download my <a href={resume} className='text-faded white-link' download>resume</a>

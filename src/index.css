@@ -172,8 +172,8 @@ section {
   outline: none;
 }
 
-.margin-top {
-  margin-top: 85px;
+.padding {
+  padding-top: 95px;
 }
 
 .project-box-caption-content {
@@ -225,3 +225,31 @@ form label:hover {
   color: red;
 }
 
+/* Buttons */
+.submit-btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 1 rem;
+  line-height: 1.5;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  background-color: goldenrod;
+  color: #212529;
+}
+
+.btn-xl {
+  padding: 1rem 2rem;
+}
+
+.submit-btn:hover,
+.submit-btn:focus,
+.submit-btn:active {
+  color: #fff;
+  background-color: lightgrey !important;
+}

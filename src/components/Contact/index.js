@@ -73,7 +73,7 @@ function Contact() {
                                 </div>
                             )}
                             <div className='text-center'>
-                                <button type='submit' className='btn btn-primary btn-xl'>Submit</button>
+                                <button type='submit' className='submit-btn btn-xl'>Submit</button>
                             </div>
                         </form>
                     </div>

@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [portfolioPages] = useState([
-    {name: "about me"},
+    {name: "about Me"},
     {name: "portfolio"},
     {name: "contact"},
     {name: "resume"}

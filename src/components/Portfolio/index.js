@@ -48,9 +48,9 @@ function Portfolio() {
 
 
     return (
-        <section className='p-0'>
+        <section className='p-0 bg-light'>
             <div className='container-fluid p-0'>
-                <h1 className='text-center margin-top'>{capitalizeFirstLetter(currentPage.name)}</h1>
+                <h1 className='text-center padding'>{capitalizeFirstLetter(currentPage.name)}</h1>
                 <hr className='my-4' />
                 <div className='row'>
                     {project.map((item, i) => (

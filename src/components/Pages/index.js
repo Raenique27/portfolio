@@ -7,7 +7,7 @@ import Resume from '../Resume';
 function Pages({currentPage}) {
     const showPage = () => {
         switch (currentPage.name) {
-            case 'about me':
+            case 'about Me':
                 return <About/>;
             case 'portfolio':
                 return <Portfolio/>;

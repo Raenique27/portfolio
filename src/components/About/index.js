@@ -4,7 +4,7 @@ import { capitalizeFirstLetter } from '../../utils/helpers';
 function About() {
     const [portfolioPages] = useState([
         {
-            name: "about me"
+            name: "about Me"
         }
     ]);
 
