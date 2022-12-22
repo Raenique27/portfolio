@@ -43,6 +43,14 @@ function Portfolio() {
             description: 'HTML, CSS, Javascript',
             repository: 'https://github.com/Raenique27/Work-Day-Calendar',
             link: 'https://raenique27.github.io/Work-Day-Calendar/'
+        },
+        {
+            img: require("../../assets/images/portfolioProjects/Shop'n-It.png").default,
+            title: "Shop'n It",
+            description: 'CSS, SASS, Node.js, express.js, MongoDB, mongoose, GraphQL, React',
+            repository: 'https://github.com/Plovato97/Shop-In-It/blob/main/package.json',
+            link: 'https://shop-n-it.herokuapp.com/'
+
         }
     ]);
 
